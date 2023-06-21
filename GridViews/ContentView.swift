@@ -16,7 +16,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                LazyVGrid(columns: gridItemLayout, spacing: 20) {
+                LazyVGrid(columns: gridItemLayout, spacing: 30) {
                     ForEach((0...999), id: \.self){
                         Image(systemName: symbols[$0 % symbols.count])
                             .font(.system(size: 30))
@@ -28,9 +28,9 @@ struct ContentView: View {
             }
             .padding()
             .navigationTitle("Events")
-            }
         }
     }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
